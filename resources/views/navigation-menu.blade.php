@@ -15,6 +15,18 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('gestionar_usuario') }}"
+                                    :active="request()->routeIs('gestionar_usuario')">
+                        Login Usuario
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('gestionar_usuario_c') }}"
+                                    :active="request()->routeIs('gestionar_usuario_c')">
+                        Gestionar Usuario
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('gestionar_modulo') }}"
+                                    :active="request()->routeIs('gestionar_modulo')">
+                        Gestionar Módulo
+                    </x-jet-nav-link>
                 </div>
             </div>
 

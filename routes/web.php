@@ -17,6 +17,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum','verified'])
+    ->get('/software',\App\Http\Livewire\SoftwareC::class)
+    ->name('software');
+
+Route::middleware(['auth:sanctum','verified'])
+    ->get('/gestionar_usuario',\App\Http\Livewire\gestionar_usuario::class)
+    ->name('gestionar_usuario');
+
+Route::middleware(['auth:sanctum','verified'])
+    ->get('/gestionar_usuario_c',\App\Http\Livewire\GestionarUsuarioC::class)
+    ->name('gestionar_usuario_c');
+
+Route::middleware(['auth:sanctum','verified'])
+    ->get('/gestionar_modulo',\App\Http\Livewire\GestionarModulo::class)
+    ->name('gestionar_modulo');
